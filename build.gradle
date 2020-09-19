@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.notaneye.learn'
-version '1.0-SNAPSHOT'
+version '1.0.0'
 
 java {
     // Set our compatibility version
@@ -18,6 +18,9 @@ tasks.withType(JavaCompile) {
     options.compilerArgs += '--enable-preview'
 }
 tasks.withType(Test) {
+    jvmArgs += '--enable-preview'
+}
+tasks.withType(JavaExec) {
     jvmArgs += '--enable-preview'
 }
 
