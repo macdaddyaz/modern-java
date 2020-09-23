@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'com.notaneye.learn'
+version '1.0.0'
+
+java {
+    // Set our compatibility version
+    sourceCompatibility = JavaVersion.VERSION_15
+    targetCompatibility = JavaVersion.VERSION_15
+    withJavadocJar()
+    withSourcesJar()
+}
+
+// Enable preview features
+tasks.withType(JavaCompile) {
+    options.compilerArgs += '--enable-preview'
+}
+tasks.withType(Test) {
+    jvmArgs += '--enable-preview'
+}
+tasks.withType(JavaExec) {
+    jvmArgs += '--enable-preview'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
