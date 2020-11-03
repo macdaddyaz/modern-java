@@ -7,11 +7,11 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
-import java.time.ZoneOffset;
+import java.time.ZoneId;
 import java.util.Date;
 
 
-public class LocalDateTimes implements Demo {
+public class LocalTimes implements Demo {
 
     private LocalDate today;
     private LocalTime currentTime;
@@ -20,11 +20,11 @@ public class LocalDateTimes implements Demo {
 
     public void demo() {
 
-        begin("java.time.LocalDateTime/LocalDate/LocalTime");
+        begin("java.time.LocalDateTime");
         today = LocalDate.now();
         currentTime = LocalTime.now();
         now = LocalDateTime.now();
-        creation();
+        localDateTime();
         fieldAccessAndModification();
         addAndSubtract();
         comparison();
@@ -33,9 +33,9 @@ public class LocalDateTimes implements Demo {
     }
 
 
-    private void creation() {
+    private void localDateTime() {
 
-        System.out.println("----- Creation -----");
+        System.out.println("----- LocalDateTime -----");
         LocalDateTime clockTower = LocalDateTime.of(1955, Month.NOVEMBER, 12, 22, 4);
         System.out.printf("Save the clock tower! %s\n", clockTower);
         LocalDate theDay = clockTower.toLocalDate();
@@ -83,17 +83,17 @@ public class LocalDateTimes implements Demo {
     private void conversion() {
 
         System.out.println("----- Conversion -----");
-        LocalDateTime notNow = LocalDateTime.of(today, currentTime);
-        System.out.println(notNow);
-        LocalDate anotherDay = now.toLocalDate();
-        System.out.println(anotherDay);
-        LocalTime thisTime = now.toLocalTime();
-        System.out.println(thisTime);
+        LocalDateTime now = LocalDateTime.of(today, currentTime);
+        System.out.printf("Combine LocalDate & LocalTime: %s\n", now);
+        LocalDate anotherDay = this.now.toLocalDate();
+        System.out.printf("Extract a LocalDate: %s\n", anotherDay);
+        LocalTime thisTime = this.now.toLocalTime();
+        System.out.printf("Extract a LocalTime: %s\n", thisTime);
         LocalDateTime thisMorningAtMidnight = today.atStartOfDay();
-        System.out.println(thisMorningAtMidnight);
+        System.out.printf("Get the start of a day: %s\n", thisMorningAtMidnight);
         LocalDateTime notThisTime = currentTime.atDate(anotherDay);
-        System.out.println(notThisTime);
-        Date oldAndBusted = Date.from(now.toInstant(ZoneOffset.ofHours(7)));
-        System.out.println(oldAndBusted);
+        System.out.printf("Add a LocalDate to a LocalTime: %s\n", notThisTime);
+        Date oldAndBusted = Date.from(this.now.atZone(ZoneId.systemDefault()).toInstant());
+        System.out.printf("Create a pre-Java 8 Date: %s\n", oldAndBusted);
     }
 }

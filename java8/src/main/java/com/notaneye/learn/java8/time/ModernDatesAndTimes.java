@@ -11,9 +11,8 @@ public class ModernDatesAndTimes {
         // Cool! The `forEach` call automatically infers the type of the `of` call
         Stream
                 .of(new Instants(),
-                    new LocalDateTimes(),
-                    new ZonedDateTimes(),
-                    new OffsetDateTimes(),
+                    new LocalTimes(),
+                    new TimeZonesAndOffsets(),
                     new Durations(),
                     new Periods(),
                     new Formatting())
