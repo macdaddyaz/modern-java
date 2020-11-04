@@ -11,10 +11,9 @@ public class ModernDatesAndTimes {
         // Cool! The `forEach` call automatically infers the type of the `of` call
         Stream
                 .of(new Instants(),
-                    new LocalTimes(),
+                    new LocalDatesAndTimes(),
                     new TimeZonesAndOffsets(),
-                    new Durations(),
-                    new Periods(),
+                    new PeriodsAndDurations(),
                     new Formatting())
                 .forEach(Demo::demo);
     }
@@ -27,6 +26,11 @@ public class ModernDatesAndTimes {
         default void begin(String name) {
 
             System.out.printf("*** %s ***\n", name);
+        }
+
+        default void section(String name) {
+
+            System.out.printf("----- %s -----\n", name);
         }
 
         default void finish() {

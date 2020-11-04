@@ -28,7 +28,7 @@ public class Instants implements Demo {
 
     private void addAndSubtract() {
 
-        System.out.println("----- Add & Subtract ----- ");
+        section("Add & Subtract");
         // Add
         inTwoDays = now.plus(2, ChronoUnit.DAYS);
         System.out.printf("2 days from now (add TemporalUnit): %s\n", inTwoDays);
@@ -48,7 +48,7 @@ public class Instants implements Demo {
 
     private void comparisons() {
 
-        System.out.println("----- Comparisons -----");
+        section("Comparisons");
         System.out.printf("Now is equal to 2 days from now: %b\n", now.equals(inTwoDays));
         System.out.printf("Now is before 10 seconds from now: %b\n", now.isBefore(tenSecondsFromNow));
         System.out.printf("Now is after 6 hours ago: %b\n", now.isAfter(sixHoursAgo));
@@ -59,7 +59,7 @@ public class Instants implements Demo {
 
     private void otherOperations() {
 
-        System.out.println("----- Other Operations -----");
+        section("Other Operations");
         long minutesSince6HoursAgo = now.until(sixHoursAgo, ChronoUnit.MINUTES);
         System.out.printf("There are %d minutes since %s\n", -minutesSince6HoursAgo, sixHoursAgo);
         long millisUntil2DaysFromNow = now.until(inTwoDays, ChronoUnit.MILLIS);

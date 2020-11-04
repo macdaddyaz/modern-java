@@ -30,7 +30,7 @@ public class TimeZonesAndOffsets implements Demo {
 
     public void timeZones() {
 
-        System.out.println("----- Time Zones (Zone IDs) -----");
+        section("Time Zones (Zone IDs)");
         System.out.printf("System time zone: %s (%s)\n",
                           system,
                           system.getRules().isFixedOffset() ? "fixed" : "variable");
@@ -47,7 +47,7 @@ public class TimeZonesAndOffsets implements Demo {
 
     public void zonedDateTime() {
 
-        System.out.println("----- java.time.ZonedDateTime -----");
+        section("java.time.ZonedDateTime");
         ZonedDateTime nowButInSingapore = ZonedDateTime.now(singapore);
         System.out.printf("In Singapore, the time is %s\n", nowButInSingapore);
         System.out.printf("But here, it's %s\n", nowButInSingapore.withZoneSameInstant(system));
@@ -56,7 +56,7 @@ public class TimeZonesAndOffsets implements Demo {
 
     public void offsetDateTime() {
 
-        System.out.println("----- java.time.OffsetDateTime -----");
+        section("java.time.OffsetDateTime");
         ZonedDateTime now = ZonedDateTime.now();
         // Moving east, we must add time
         ZoneOffset fiveHoursEast = hoursFrom(now.getOffset(), 5);

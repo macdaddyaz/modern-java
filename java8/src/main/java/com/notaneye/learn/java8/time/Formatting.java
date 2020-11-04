@@ -8,5 +8,6 @@ public class Formatting implements Demo {
 
     public void demo() {
 
+        begin("Formatting");
     }
 }

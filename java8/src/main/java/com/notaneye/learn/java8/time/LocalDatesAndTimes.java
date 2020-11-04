@@ -11,7 +11,7 @@ import java.time.ZoneId;
 import java.util.Date;
 
 
-public class LocalTimes implements Demo {
+public class LocalDatesAndTimes implements Demo {
 
     private LocalDate today;
     private LocalTime currentTime;
@@ -35,7 +35,7 @@ public class LocalTimes implements Demo {
 
     private void localDateTime() {
 
-        System.out.println("----- LocalDateTime -----");
+        section("LocalDateTime");
         LocalDateTime clockTower = LocalDateTime.of(1955, Month.NOVEMBER, 12, 22, 4);
         System.out.printf("Save the clock tower! %s\n", clockTower);
         LocalDate theDay = clockTower.toLocalDate();
@@ -49,7 +49,7 @@ public class LocalTimes implements Demo {
 
     private void fieldAccessAndModification() {
 
-        System.out.println("----- Field Access & Modification -----");
+        section("Field Access & Modification");
         System.out.printf("Today is day %s\n", today.getDayOfWeek());
         System.out.printf("Today is day %d of %d\n", today.getDayOfYear(), today.getYear());
         LocalDateTime other = now.withMonth(9).withHour(1);
@@ -60,7 +60,7 @@ public class LocalTimes implements Demo {
 
     private void addAndSubtract() {
 
-        System.out.println("----- Add & Subtract -----");
+        section("Add & Subtract");
         LocalDate twoDaysAgo = today.minusDays(2);
         System.out.printf("Two days ago was %s\n", twoDaysAgo);
         LocalTime in3Hours12Minutes = currentTime.plusHours(3).plusMinutes(12);
@@ -72,7 +72,7 @@ public class LocalTimes implements Demo {
 
     private void comparison() {
 
-        System.out.println("----- Comparison -----");
+        section("Comparison");
         LocalDateTime bttfDay = LocalDateTime.of(2015, 10, 21, 19, 28, 0);
         System.out.printf("Back to the Future Day is in the %s\n", bttfDay.isBefore(now) ? "past" : "future");
         LocalTime highNoon = LocalTime.of(12, 0, 0, 0);
@@ -82,7 +82,7 @@ public class LocalTimes implements Demo {
 
     private void conversion() {
 
-        System.out.println("----- Conversion -----");
+        section("Conversion");
         LocalDateTime now = LocalDateTime.of(today, currentTime);
         System.out.printf("Combine LocalDate & LocalTime: %s\n", now);
         LocalDate anotherDay = this.now.toLocalDate();
