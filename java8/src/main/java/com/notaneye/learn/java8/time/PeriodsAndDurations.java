@@ -28,6 +28,7 @@ public class PeriodsAndDurations implements Demo {
         final ZonedDateTime afterDst = beforeDst.plus(threeDays);
         System.out.printf("Before DST:   %s\n", beforeDst);
         System.out.printf("3 days later: %s\n", afterDst);
+        // Notice that the local time is "conceptually" 3 days later, despite crossing the DST boundary
     }
 
 
@@ -40,5 +41,6 @@ public class PeriodsAndDurations implements Demo {
         final ZonedDateTime afterDst = beforeDst.plus(threeDays);
         System.out.printf("Before DST:   %s\n", beforeDst);
         System.out.printf("3 days later: %s\n", afterDst);
+        // Notice that the local time is exactly 72 hours later, appearing to "lose" an hour due to DST
     }
 }
