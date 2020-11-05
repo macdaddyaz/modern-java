@@ -16,7 +16,8 @@ public class DiamondOperator {
         allTheThings.add("Thing 1");
         allTheThings.add("Thing 2");
         while (!allTheThings.isEmpty()) {
-            System.out.println(allTheThings.remove());
+            String aThing = allTheThings.remove();
+            System.out.println(aThing);
         }
     }
 }
