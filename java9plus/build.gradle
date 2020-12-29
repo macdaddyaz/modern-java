@@ -20,6 +20,13 @@ tasks.withType(JavaCompile) {
 tasks.withType(Test) {
     jvmArgs += '--enable-preview'
 }
+tasks.withType(Javadoc) {
+    options {
+        memberLevel = JavadocMemberLevel.PRIVATE
+        addBooleanOption('-enable-preview', true)
+        addStringOption('-release', '15')
+    }
+}
 tasks.withType(JavaExec) {
     jvmArgs += '--enable-preview'
     // jvmArgs += '-Xlog'

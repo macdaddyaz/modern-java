@@ -2,6 +2,10 @@ package com.notaneye.learn.java9;
 
 
 /**
+ * JShell is a command line REPL for Java (read-evaluate-print-loop). It does
+ * all the things you'd expect from a REPL, allowing you to import classes,
+ * declare variables, create classes and objects, etc. Very useful for rapid
+ * prototyping.
  * <pre>
  * $ jshell
  * |  Welcome to JShell -- Version 15

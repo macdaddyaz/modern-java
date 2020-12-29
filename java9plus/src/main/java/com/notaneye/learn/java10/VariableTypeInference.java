@@ -4,14 +4,19 @@ package com.notaneye.learn.java10;
 import java.util.Arrays;
 
 
-// The `var` keyword was introduced as a shorthand variable declaration. The
-// variable it declares is still fully typed, but the type is inferred from the
-// right-hand side of the statement.
-//
-// Type inference only works in the following places:
-// - local variables with initializers
-// - indexes in the enhanced for-loop
-// - locals declared in a traditional for-loop
+/**
+ * <p>
+ * The `var` keyword was introduced as a shorthand variable declaration. The
+ * variable it declares is still fully typed, but the type is inferred from the
+ * right-hand side of the statement.
+ * </p>
+ * <p>Type inference only works in the following places:</p>
+ * <ul>
+ *   <li>local variables with initializers</li>
+ *   <li>indexes in the enhanced for-loop</li>
+ *   <li>locals declared in a traditional for-loop</li>
+ * </ul>
+ */
 public class VariableTypeInference {
 
     @SuppressWarnings({ "CommentedOutCode", "ForLoopReplaceableByForEach" })

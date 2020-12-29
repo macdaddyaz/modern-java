@@ -2,7 +2,7 @@ package com.notaneye.learn.java9;
 
 
 /**
- * <h1>The Java Platform Module System</h1>
+ * <h2>The Java Platform Module System</h2>
  * <p>
  * A full tutorial and example are beyond the scope of this project and
  * presentation, but in a nutshell, the Module System provides additional
@@ -39,7 +39,7 @@ package com.notaneye.learn.java9;
  * <a href="http://openjdk.java.net/jeps/282">JEP 282</a> and
  * <a href="http://openjdk.java.net/jeps/220">JEP 220</a> for more details.
  * </p>
- * <h2>Multi-Release JAR Files</h2>
+ * <h3>Multi-Release JAR Files</h3>
  * <p>
  * The Module System allows JAR files to contain classes that are only relevant
  * to particular Java Platform versions. In other words, a library author can
@@ -49,7 +49,7 @@ package com.notaneye.learn.java9;
  * before the "generic" versions of those classes. See
  * <a href="http://openjdk.java.net/jeps/238">JEP 238</a> for details.
  * </p>
- * <h2>Adoption</h2>
+ * <h3>Adoption</h3>
  * <p>
  * Interestingly, despite JPMS being one of the most fundamental changes to the
  * Java Platform ever, reception by the development community has been lukewarm.

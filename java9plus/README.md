@@ -76,7 +76,7 @@ enhancements and a new set of APIs for manipulating bytecode.*
 * Hidden classes, which keep certain framework implementation details secret
   from consumers of the framework
 * Reimplemented Datagram (UDP) Socket API
-* *(Eliminated)* Nashorn JavaScript engine
+* *(Removed)* Nashorn JavaScript engine
 * *(Preview)* Pattern matching for `instanceof`
     * No breaking changes from the preview in Java 14
 * *(Preview)* Record classes

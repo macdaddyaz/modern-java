@@ -2,7 +2,7 @@ package com.notaneye.learn.java9;
 
 
 /**
- * <h1>Reactive Streams</h1>
+ * <h2>Reactive Streams</h2>
  * <p>
  * This enhancement sounds grandiose, but in fact is just 4 simple interfaces,
  * added to the {@link java.util.concurrent} package (within the
@@ -17,7 +17,7 @@ package com.notaneye.learn.java9;
  * on, such as the {@link java.net.http.HttpClient HttpClient} or reactive
  * database connectors.
  * </p>
- * <h2>Reactive Development</h2>
+ * <h3>Reactive Development</h3>
  * <p>
  * What is "reactive" development? Briefly, it's a non-blocking concurrent
  * programming technique to handle streams of data or events in a scalable &amp;
@@ -30,7 +30,7 @@ package com.notaneye.learn.java9;
  * frameworks define a set of standard operators, such as transformers &amp;
  * compositors.
  * </p>
- * <h2>Reactive Frameworks</h2>
+ * <h3>Reactive Frameworks</h3>
  * <p>
  * Currently, there are two main reactive frameworks in the Java ecosystem:
  * <a href="http://reactivex.io/">ReactiveX</a> and
