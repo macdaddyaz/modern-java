@@ -18,22 +18,22 @@ import java.time.format.DateTimeFormatter;
  * </p>
  * <p>
  * This change simplifies this common pattern:
+ * </p>
  * <pre>
  * if (obj instanceof SomeClass) {
  *     SomeClass sc = (SomeClass) obj;
  *     // use sc...
  * }
  * </pre>
- * </p>
  * <p>
  * Instead, we can merge those two lines into one:
+ * </p>
  * <pre>
  * if (obj instanceof SomeClass sc) {
  *     // ----------------------^^
  *     // use sc...
  * }
  * </pre>
- * </p>
  */
 public class PatternMatchingInstanceof {
 
