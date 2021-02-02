@@ -31,7 +31,7 @@ public class VariableTypeInference {
         // someNumbers = new Object();
         var list = Arrays.asList("X", "Y", "Z");
         // `list` is known to be of type `List<String>`
-        list.add(0, "A");
+        list.set(0, "A");
         for (var s : list) {
             System.out.println(s);
         }

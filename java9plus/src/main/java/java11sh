@@ -1,0 +1,51 @@
+#!java --source 11
+
+
+/**
+ * <p>
+ * This class can be run on the command line directly. First, if running on a
+ * POSIX platform, make sure that the executable bit is set:
+ * {@code $ chmod +x java11sh}
+ * </p>
+ * <p>
+ * Then, simply run the file as though it's a program: {@code $ ./java11sh}. You
+ * may also specify arguments, which will be passed to the
+ * {@link #main main method's} {@code args} array.
+ * </p>
+ * <p>
+ * The magic is the first line in the file, called the "shebang". It's
+ * interpreted by the shell as a directive, and informs the shell which
+ * interpreter to use for the script. The {@code --source} flag is required in
+ * this usage, since it tells the interpreter (the JVM) to run in "source" mode.
+ * Note that the {@code .java} file extension must <em>not</em> be present on
+ * the file in order to use it directly as a shell script.
+ * </p>
+ * <p>
+ * Another cool feature, an entire Jar file can be converted into a shell
+ * script:
+ * </p>
+ * <ol>
+ *     <li>Compile the classes and build the Jar file</li>
+ *     <li>Create a shell script with the appropriate "shebang":
+ *     {@code $ echo "#!java -jar" > myjavacli}</li>
+ *     <li>Concatenate the Jar file content into the shell script:
+ *     {@code $ cat myprogram.jar >> myjavacli}</li>
+ *     <li>Make the script executable, as above</li>
+ * </ol>
+ * <p>
+ * Note that this is really just a shell trick, and not specific to any
+ * particular version of Java. Hat tip to
+ * <a href="https://medium.com/@benweidig/java-for-shell-scripting-5b5af5860c47">
+ * this blog post</a>.
+ * </p>
+ */
+public class Java11ShellScript {
+
+    public static void main(String[] args) {
+
+        System.out.println("Running this Java program as a shell script");
+        for (var arg : args) {
+            System.out.println(arg);
+        }
+    }
+}
