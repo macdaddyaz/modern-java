@@ -66,7 +66,7 @@ public class PatternMatchingInstanceof {
             System.out.printf("A bigger long value: %d%n", l);
         }
         else {
-            System.out.println("I don't know the heck this thing is!");
+            System.out.println("I don't know what the heck this thing is!");
         }
     }
 }
