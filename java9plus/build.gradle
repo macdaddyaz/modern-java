@@ -7,8 +7,8 @@ version '1.0.0'
 
 java {
     // Set our compatibility version
-    sourceCompatibility = JavaVersion.VERSION_15
-    targetCompatibility = JavaVersion.VERSION_15
+    sourceCompatibility = JavaVersion.VERSION_18
+    targetCompatibility = JavaVersion.VERSION_18
     withJavadocJar()
     withSourcesJar()
 }
@@ -24,7 +24,7 @@ tasks.withType(Javadoc) {
     options {
         memberLevel = JavadocMemberLevel.PRIVATE
         addBooleanOption('-enable-preview', true)
-        addStringOption('-release', '15')
+        addStringOption('-release', '18')
     }
 }
 tasks.withType(JavaExec) {
