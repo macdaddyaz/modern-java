@@ -82,3 +82,15 @@ enhancements and a new set of APIs for manipulating bytecode.*
 * *(Preview)* Record classes
     * No breaking changes from the preview in Java 14
 * *(Preview)* Sealed classes
+
+## Java 16
+
+_TODO_
+
+## Java 17
+
+_TODO_
+
+## Java 18
+
+_TODO_
